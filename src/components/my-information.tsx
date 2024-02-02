@@ -6,7 +6,7 @@ export default function MyInformation() {
   return (
     <div className="flex justify-center mb-4">
       <div className="flex p-2 pt-8 justify-around">
-        <div className="pr-28 pt-8">
+        <div className="pr-28 pt-4">
           <h1 className="text-white text-4xl leading-tight">
             Olá, eu sou o <br />
             Érico Cavalcanti
