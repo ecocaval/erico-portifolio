@@ -44,9 +44,6 @@ export default function ProfessionalInformation() {
               <div
                 className={`bg-white transition-all duration-700 w-full h-1 opacity-40`}
               />
-              <div
-                className={`bg-white transition-all duration-700 w-1/2 h-1 opacity-40`}
-              />
             </div>
             <div className="h-2/3 flex items-center">
               <div
@@ -66,7 +63,7 @@ export default function ProfessionalInformation() {
             </div>
           </div>
           <div
-            className={`rounded-2xl bg-[#ffffff1d] border border-gray-500 w-2/3 h-[340px] px-10 py-6 mr-20`}
+            className={`rounded-2xl w-2/3 h-[340px] px-10 py-6 mr-20`}
           >
             <div className="flex flex-col gap-4">
               <div className="flex justify-between">
@@ -99,7 +96,7 @@ export default function ProfessionalInformation() {
                   />
                 </div>
               </div>
-              <p className="text-lg text-white mt-4">
+              <p className="text-lg text-white mt-4 text-justify">
                 {selectedCompany.description}
               </p>
             </div>

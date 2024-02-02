@@ -57,6 +57,7 @@ export const COMPANIES_LIST = [
         occupation: "Estagiário",
       },
     ],
-    description: "To do.", //!FIXME
+    description:
+      "Como Desenvolvedor Júnior na área de sistemas automotivos, contribuí significativamente no desenvolvimento do app mobile e desktop (windows only) da plataforma e na modernização do site da empresa, aprimorando funcionalidades e participando ativamente no design.",
   },
 ];

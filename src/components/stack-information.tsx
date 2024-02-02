@@ -37,7 +37,7 @@ export default function StackInformation() {
             ))}
           </div>
           <div
-            className={`rounded-2xl bg-[#ffffff1d] border border-gray-500 w-full min-w-80 h-auto 
+            className={`rounded-2xl bg-[#ffffff12] w-full min-w-80 h-auto 
             mb-10 ml-20 p-4 mr-10`}
           >
             <div
