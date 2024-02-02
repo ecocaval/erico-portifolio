@@ -22,7 +22,7 @@ export default function StackButton({
   return (
     <>
       <div className="group mb-10 flex relative cursor-pointer">
-        <BigLayoutDot size="8" additionalCss="mt-4 mr-4" />
+        <BigLayoutDot additionalCss="mt-4 mr-4" />
         <div>
           <Image
             src={`${iconSourcePath}`}
