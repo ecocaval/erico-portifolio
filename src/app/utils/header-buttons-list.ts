@@ -1,6 +1,6 @@
 import { buttonWithIconPropsType } from "@/components/button-with-icon";
 
-export const headerButtonsList: buttonWithIconPropsType[] = [
+export const HEADER_BUTTONS_LIST: buttonWithIconPropsType[] = [
   {
     iconSourcePath: "/home.svg",
     darkIconSourcePath: "/home-dark.svg",

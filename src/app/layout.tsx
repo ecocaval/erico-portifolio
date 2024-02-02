@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ButtonWithIcon } from "@/components/button-with-icon";
-import { headerButtonsList } from "./utils/header-buttons-list";
+import { HEADER_BUTTONS_LIST } from "./utils/header-buttons-list";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +16,9 @@ export default function RootLayout({
       <body className={bodyClassName}>
         <header className="px-12 h-20 flex justify-start items-center my-2 mt-3">
           <div className="flex justify-center items-center">
-            {headerButtonsList.map((item, index) => (
+            {HEADER_BUTTONS_LIST.map(item => (
               <ButtonWithIcon
-                key={index}
+                key={Math.random()}
                 iconSourcePath={item.iconSourcePath}
                 darkIconSourcePath={item.darkIconSourcePath}
                 iconAltText={item.iconAltText}

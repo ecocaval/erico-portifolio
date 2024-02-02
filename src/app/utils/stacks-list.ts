@@ -11,7 +11,7 @@ export interface stackType extends Omit<stackButtonPropsType, "selectedStack"> {
   technologies: buttonWithIconPropsType[]
 }
 
-export let stacksList: stackType[] = [
+export const STACKS_LIST: stackType[] = [
   {
     stack: STACKS.java,
     iconSourcePath: "/java.svg",

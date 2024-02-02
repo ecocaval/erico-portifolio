@@ -1,6 +1,6 @@
 import { buttonWithIconPropsType } from "@/components/button-with-icon";
 
-export const contactMeButtonsList: buttonWithIconPropsType[] = [
+export const CONTACT_ME_BUTTONS_LIST: buttonWithIconPropsType[] = [
   {
     iconSourcePath: "/whatsapp.svg",
     darkIconSourcePath: "/whatsapp-dark.svg",

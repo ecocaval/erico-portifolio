@@ -7,7 +7,7 @@ type educationalListType = {
   };
 }[];
 
-export const educationalList: educationalListType = [
+export const EDUCATIONAL_LIST: educationalListType = [
   {
     institution: "Faculdade Anhanguera",
     course: "Sistemas de Informação",
