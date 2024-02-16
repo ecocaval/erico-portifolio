@@ -1,7 +1,21 @@
 import { buttonWithIconPropsType } from "@/components/button-with-icon";
 
-export const headerButtonsList: buttonWithIconPropsType[] = [
+const refs = {
+  HOME: "HOME",
+  ABOUT: "ABOUT",
+  PROFESSIONAL: "PROFESSIONAL",
+  ACADEMIC: "ACADEMIC",
+  CONTACT: "CONTACT",
+  RECOMENDATION: "RECOMENDATION",
+  DOWNLOAD: "DOWNLOAD",
+};
+
+export const { HOME, ABOUT, PROFESSIONAL, CONTACT, ACADEMIC, RECOMENDATION, DOWNLOAD } =
+  refs;
+
+export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = [
   {
+    ref: HOME,
     iconSourcePath: "/home.svg",
     darkIconSourcePath: "/home-dark.svg",
     iconAltText: "home icon",
@@ -10,20 +24,34 @@ export const headerButtonsList: buttonWithIconPropsType[] = [
     buttonText: "Home",
     iconAdditionalCss: "",
     textAdditionalCss: "",
-    buttonAdditionalCss: "hover:bg-white duration-300 ease"
+    buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
+    ref: ABOUT,
     iconSourcePath: "/about.svg",
     darkIconSourcePath: "/about-dark.svg",
     iconAltText: "about icon",
     iconWidth: 20,
     iconHeight: 20,
-    buttonText: "Sobre",
+    buttonText: "Stack",
     iconAdditionalCss: "",
     textAdditionalCss: "",
-    buttonAdditionalCss: "hover:bg-white duration-300 ease"
+    buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
+    ref: ACADEMIC,
+    iconSourcePath: "/high-school.svg",
+    darkIconSourcePath: "/high-school-dark.svg",
+    iconAltText: "academic xp icon",
+    iconWidth: 34,
+    iconHeight: 34,
+    buttonText: "XP Acadêmica",
+    iconAdditionalCss: "",
+    textAdditionalCss: "",
+    buttonAdditionalCss: "hover:bg-white duration-300 ease",
+  },
+  {
+    ref: PROFESSIONAL,
     iconSourcePath: "/professional-xp.svg",
     darkIconSourcePath: "/professional-xp-dark.svg",
     iconAltText: "professional xp icon",
@@ -32,9 +60,22 @@ export const headerButtonsList: buttonWithIconPropsType[] = [
     buttonText: "XP Profissional",
     iconAdditionalCss: "",
     textAdditionalCss: "",
-    buttonAdditionalCss: "hover:bg-white duration-300 ease"
+    buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
+    ref: RECOMENDATION,
+    iconSourcePath: "/recomendation.svg",
+    darkIconSourcePath: "/recomendation-dark.svg",
+    iconAltText: "recomendation icon",
+    iconWidth: 24,
+    iconHeight: 16,
+    buttonText: "Recomendações",
+    iconAdditionalCss: "",
+    textAdditionalCss: "",
+    buttonAdditionalCss: "hover:bg-white duration-300 ease",
+  },
+  {
+    ref: CONTACT,
     iconSourcePath: "/contact.svg",
     darkIconSourcePath: "/contact-dark.svg",
     iconAltText: "contact icon",
@@ -43,16 +84,18 @@ export const headerButtonsList: buttonWithIconPropsType[] = [
     buttonText: "Contato",
     iconAdditionalCss: "",
     textAdditionalCss: "",
-    buttonAdditionalCss: "hover:bg-white duration-300 ease"
+    buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
+    ref: DOWNLOAD,
     iconSourcePath: "/download.svg",
     darkIconSourcePath: "/download-dark.svg",
     iconAltText: "download icon",
     iconWidth: 20,
     iconHeight: 20,
     buttonText: "Download Curriculum Vitae",
-    buttonAdditionalCss: "hover:bg-white duration-300 ease bg-[#2B1E3C] border border-gray-500 ml-[340px]",
+    buttonAdditionalCss:
+      "hover:bg-white duration-300 ease bg-[#2B1E3C] border border-gray-500 ml-[120px]",
     iconAdditionalCss: "",
     textAdditionalCss: "",
   },

@@ -1,16 +1,17 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import SmallLayoutDot from "./small-layout-dot";
 import { COMPANIES_LIST, PETZ } from "@/app/utils/companies-list";
+import { ReferenceToScrollContext } from "@/contexts/referenceToScrollContext";
 
 export default function ProfessionalInformation() {
-
-
   const [selectedCompany, setSelectedCompany] = useState(COMPANIES_LIST[0]);
+
+  const { professionalInfoReference } = useContext(ReferenceToScrollContext);
 
   return (
     <>
-      <div className="w-full mt-8">
+      <div className="w-full mt-8" ref={professionalInfoReference}>
         <h2 className="text-white text-4xl">Experiência Profissional:</h2>
         <div className="mt-10 flex gap-8 justify-between">
           <div className="w-1/3 h-auto">
@@ -62,9 +63,7 @@ export default function ProfessionalInformation() {
               </div>
             </div>
           </div>
-          <div
-            className={`rounded-2xl w-2/3 h-[340px] px-10 py-6 mr-20`}
-          >
+          <div className={`rounded-2xl w-2/3 h-[340px] px-10 py-6 mr-20`}>
             <div className="flex flex-col gap-4">
               <div className="flex justify-between">
                 <div className="flex flex-col gap-4">

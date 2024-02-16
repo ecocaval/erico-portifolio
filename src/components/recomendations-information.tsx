@@ -6,13 +6,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { COMPANIES_LIST } from "@/app/utils/companies-list";
 import { RECOMENDATION_LIST } from "@/app/utils/recomendation-list";
+import { useContext } from "react";
+import { ReferenceToScrollContext } from "@/contexts/referenceToScrollContext";
 
 export default function RecomendationsInformation() {
+
+  const { recomendationlInfoReference } = useContext(ReferenceToScrollContext);
+
   return (
     <>
-      <div className="w-full mt-8">
+      <div className="w-full" ref={recomendationlInfoReference}>
         <h2 className="text-white text-4xl">Recomendações:</h2>
         <div className="flex justify-center items-center">
           <div className="w-1/2 mt-8">

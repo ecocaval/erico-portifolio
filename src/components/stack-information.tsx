@@ -1,7 +1,8 @@
 import { STACKS_LIST } from "@/app/utils/stacks-list";
 import { ButtonWithIcon } from "./button-with-icon";
 import StackButton from "./stack-button";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ReferenceToScrollContext } from "@/contexts/referenceToScrollContext";
 
 export default function StackInformation() {
   const [selectedStack, setSelectedStack] = useState(STACKS_LIST[0]);
@@ -9,10 +10,12 @@ export default function StackInformation() {
     STACKS_LIST[0]
   );
 
+  const { stackInfoReference } = useContext(ReferenceToScrollContext);
+
   return (
     <>
-      <div className="w-1/2">
-        <h2 className="text-white text-4xl">Stacks Utilizadas:</h2>
+      <div className="w-1/2" ref={stackInfoReference}>
+        <h2 className="text-white text-4xl">Stack Utilizadas:</h2>
         <div className="flex mt-8">
           <div className="">
             {STACKS_LIST.map((item) => (

@@ -2,10 +2,15 @@ import Image from "next/image";
 import SmallLayoutDot from "./small-layout-dot";
 import BigLayoutDot from "./big-layout-dot";
 import { EDUCATIONAL_LIST } from "@/app/utils/educational-list";
+import { useContext } from "react";
+import { ReferenceToScrollContext } from "@/contexts/referenceToScrollContext";
 
 export default function AcademicInformation() {
+
+  const { academicInfoReference } = useContext(ReferenceToScrollContext);
+  
   return (
-    <div className="w-auto ml-20">
+    <div className="w-auto ml-20" ref={academicInfoReference}>
       <h2 className="text-white text-4xl">Formação Acadêmica:</h2>
       <div className="mt-8 flex flex-col gap-4">
         {EDUCATIONAL_LIST.map((item, listIndex) => (
