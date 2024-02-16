@@ -15,7 +15,6 @@ import { ReferenceToScrollContext } from "@/contexts/referenceToScrollContext";
 import { useContext } from "react";
 
 export default function Header() {
-
   const {
     stackInfoReference,
     academicInfoReference,
@@ -26,25 +25,27 @@ export default function Header() {
   const SCROLLING_PROPERTIES: ScrollIntoViewOptions = {
     behavior: "smooth",
     block: "start",
-  }
+  };
 
   function handleScrollByReference(ref: string) {
-      switch (ref) {
-        case ABOUT:
-          stackInfoReference.current?.scrollIntoView(SCROLLING_PROPERTIES);
-          break;
-        case PROFESSIONAL:
-          professionalInfoReference.current?.scrollIntoView(SCROLLING_PROPERTIES);
-          break;
-        case ACADEMIC:
-          academicInfoReference.current?.scrollIntoView(SCROLLING_PROPERTIES);
-          break;
-        case RECOMENDATION:
-          recomendationlInfoReference.current?.scrollIntoView(SCROLLING_PROPERTIES);
-          break;
-        default:
-          break;
-      }
+    switch (ref) {
+      case ABOUT:
+        stackInfoReference.current?.scrollIntoView(SCROLLING_PROPERTIES);
+        break;
+      case PROFESSIONAL:
+        professionalInfoReference.current?.scrollIntoView(SCROLLING_PROPERTIES);
+        break;
+      case ACADEMIC:
+        academicInfoReference.current?.scrollIntoView(SCROLLING_PROPERTIES);
+        break;
+      case RECOMENDATION:
+        recomendationlInfoReference.current?.scrollIntoView(
+          SCROLLING_PROPERTIES
+        );
+        break;
+      default:
+        break;
+    }
   }
 
   return (
@@ -53,10 +54,11 @@ export default function Header() {
         <div className="flex justify-center items-center">
           {headerButtonsList.map((item) => (
             <div
+              key={Math.random()}
               onClick={() => handleScrollByReference(item.ref)}
             >
               {item.ref == DOWNLOAD ? (
-                <a key={Math.random()} href="/curriculum.pdf" download>
+                <a href="/curriculum.pdf" download>
                   <ButtonWithIcon
                     iconSourcePath={item.iconSourcePath}
                     darkIconSourcePath={item.darkIconSourcePath}
@@ -71,7 +73,6 @@ export default function Header() {
                 </a>
               ) : (
                 <ButtonWithIcon
-                  key={Math.random()}
                   iconSourcePath={item.iconSourcePath}
                   darkIconSourcePath={item.darkIconSourcePath}
                   iconAltText={item.iconAltText}
