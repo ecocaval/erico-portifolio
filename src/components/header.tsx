@@ -56,9 +56,8 @@ export default function Header() {
               onClick={() => handleScrollByReference(item.ref)}
             >
               {item.ref == DOWNLOAD ? (
-                <a href="/curriculum.pdf" download>
+                <a key={Math.random()} href="/curriculum.pdf" download>
                   <ButtonWithIcon
-                    key={Math.random()}
                     iconSourcePath={item.iconSourcePath}
                     darkIconSourcePath={item.darkIconSourcePath}
                     iconAltText={item.iconAltText}
