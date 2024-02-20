@@ -18,11 +18,11 @@ export default function RecomendationsInformation() {
   return (
     <>
       <div className="w-full" ref={recomendationlInfoReference}>
-        <h2 className="text-white text-4xl">
+        <h2 className="text-white text-4xl small-breakpoint:px-0 mid-breakpoint:px-20">
           {language == LANGUAGES.PTBR ? "Recomendações:" : "Recommendations:"}
         </h2>
         <div className="flex justify-center items-center">
-          <div className="w-1/2 mt-8">
+          <div className="w-full mt-8 mx-20 2xl:w-1/2">
             <Carousel>
               <CarouselContent className="flex items-center">
                 {RECOMENDATION_LIST.map((recommendation, _) => (

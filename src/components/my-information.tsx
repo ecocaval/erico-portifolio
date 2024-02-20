@@ -8,9 +8,9 @@ export default function MyInformation() {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div className="flex justify-center mb-4">
-      <div className="flex p-2 pt-8 justify-around">
-        <div className="pr-28 pt-4">
+    <div className="flex justify-center">
+      <div className="flex small-breakpoint:flex-col-reverse small-breakpoint:items-center small-breakpoint:gap-12 p-2 pt-8 justify-around">
+        <div className="pr-28 mid-breakpoint:pr-4 pt-4">
           <h1 className="text-white text-4xl leading-tight">
             {language == LANGUAGES.PTBR ? "Olá, eu sou o" : "Hi, I am"} <br />
             Érico Cavalcanti
@@ -43,18 +43,18 @@ export default function MyInformation() {
             ))}
           </div>
         </div>
-        <div className="relative w-[400px] h-[400px]">
+        <div className="relative w-[400px] h-[400px] mid-breakpoint:w-[300px] mid-breakpoint:h-[300px]">
           <Image
-            className="rounded-full absolute z-10 min-w-[350px] min-h-[350px]"
+            className="rounded-full absolute z-10 mid-breakpoint:w-[300px] mid-breakpoint:h-[300px]"
             src="/self-image.png"
             alt="Self Image Logo"
             width={350}
             height={350}
           />
           <div
-            className="w-[350px] h-[350px] rounded-full bg-gradient-to-b 
-          from-white to-transparent filter absolute left-4 
-          drop-shadow-[10px_10px_20px_rgba(255,255,255,0.5)]"
+            className="w-[350px] h-[350px] mid-breakpoint:w-[300px] mid-breakpoint:h-[300px] 
+            rounded-full bg-gradient-to-b from-white to-transparent filter absolute left-4 
+            drop-shadow-[10px_10px_20px_rgba(255,255,255,0.5)]"
           />
         </div>
       </div>

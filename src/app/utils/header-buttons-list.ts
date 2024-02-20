@@ -2,7 +2,7 @@ import { buttonWithIconPropsType } from "@/components/button-with-icon";
 
 const refs = {
   HOME: "HOME",
-  ABOUT: "ABOUT",
+  STACK: "STACK",
   PROFESSIONAL: "PROFESSIONAL",
   ACADEMIC: "ACADEMIC",
   CONTACT: "CONTACT",
@@ -12,7 +12,7 @@ const refs = {
 
 export const {
   HOME,
-  ABOUT,
+  STACK,
   PROFESSIONAL,
   CONTACT,
   ACADEMIC,
@@ -20,7 +20,7 @@ export const {
   DOWNLOAD,
 } = refs;
 
-export const headerButtonsList: (buttonWithIconPropsType & {
+export const HEADER_BUTTONS_LIST: (buttonWithIconPropsType & {
   ref: string;
   buttonTextEnglish: string;
 })[] = [
@@ -34,11 +34,11 @@ export const headerButtonsList: (buttonWithIconPropsType & {
     buttonText: "Home",
     buttonTextEnglish: "Home",
     iconAdditionalCss: "",
-    textAdditionalCss: "",
+    textAdditionalCss: "hidden 2xl:block",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
-    ref: ABOUT,
+    ref: STACK,
     iconSourcePath: "/about.svg",
     darkIconSourcePath: "/about-dark.svg",
     iconAltText: "about icon",
@@ -47,7 +47,7 @@ export const headerButtonsList: (buttonWithIconPropsType & {
     buttonText: "Stack",
     buttonTextEnglish: "Stack",
     iconAdditionalCss: "",
-    textAdditionalCss: "",
+    textAdditionalCss: "hidden 2xl:block",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
@@ -60,7 +60,7 @@ export const headerButtonsList: (buttonWithIconPropsType & {
     buttonText: "XP Acadêmica",
     buttonTextEnglish: "Academic XP",
     iconAdditionalCss: "",
-    textAdditionalCss: "",
+    textAdditionalCss: "hidden 2xl:block",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
@@ -73,7 +73,7 @@ export const headerButtonsList: (buttonWithIconPropsType & {
     buttonText: "XP Profissional",
     buttonTextEnglish: "Work XP",
     iconAdditionalCss: "",
-    textAdditionalCss: "",
+    textAdditionalCss: "hidden 2xl:block",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
@@ -86,7 +86,7 @@ export const headerButtonsList: (buttonWithIconPropsType & {
     buttonText: "Recomendações",
     buttonTextEnglish: "Recomendations",
     iconAdditionalCss: "",
-    textAdditionalCss: "",
+    textAdditionalCss: "hidden 2xl:block",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
@@ -99,7 +99,7 @@ export const headerButtonsList: (buttonWithIconPropsType & {
     buttonText: "Contato",
     buttonTextEnglish: "Contact Me",
     iconAdditionalCss: "",
-    textAdditionalCss: "",
+    textAdditionalCss: "hidden 2xl:block",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
   },
   {
@@ -109,11 +109,11 @@ export const headerButtonsList: (buttonWithIconPropsType & {
     iconAltText: "download icon",
     iconWidth: 20,
     iconHeight: 20,
-    buttonText: "Download Curriculum Vitae",
-    buttonTextEnglish: "Download Curriculum Vitae",
-    buttonAdditionalCss:
-      "hover:bg-white duration-300 ease bg-[#2B1E3C] border border-gray-500 ml-[120px]",
+    buttonText: "Curriculum Vitae",
+    buttonTextEnglish: "Curriculum Vitae",
     iconAdditionalCss: "",
-    textAdditionalCss: "",
+    textAdditionalCss: "hidden px_770:block",
+    buttonAdditionalCss:
+      "hover:bg-white duration-300 ease bg-[#2B1E3C] border border-gray-500 header-breakpoint:ml-40",
   },
 ];

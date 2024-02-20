@@ -13,22 +13,23 @@ export default function ProfessionalInformation() {
 
   return (
     <>
-      <div className="w-full mt-8" ref={professionalInfoReference}>
-        <h2 className="text-white text-4xl">
+      <div className="w-full mt-0 mid-breakpoint:mt-16 mid-breakpoint:px-20 small-breakpoint:px-0 small-breakpoint:mb-12" ref={professionalInfoReference}>
+        <h2 className="text-white text-4xl mid-breakpoint:px-20">
           {language == LANGUAGES.PTBR
             ? "Experiência Profissional:"
             : "Work Experience:"}
         </h2>
-        <div className="mt-10 flex gap-8 justify-between">
-          <div className="w-1/3 h-auto">
-            <div className="flex h-auto gap-20 items-center">
+        <div className="mt-8 flex justify-between mid-breakpoint:flex-col mid-breakpoint:mx-12">
+          <div className="w-1/3 h-auto mid-breakpoint:w-full mid-breakpoint:flex
+          mid-breakpoint:justify-start mid-breakpoint:items-center mid-breakpoint:px-20 gap-16">
+            <div className="flex h-auto gap-20 items-center px_1000:gap-12">
               {COMPANIES_LIST.map((company, _) => (
-                <div key={Math.random()} className="h-20 cursor-pointer">
+                <div key={Math.random()} className="h-20 px_1000:h-auto cursor-pointer flex items-center">
                   <div
                     onMouseMove={() => {
                       setSelectedCompany(company);
                     }}
-                    className="h-2/3 flex items-center"
+                    className="w-1/1 h-2/3 flex items-center justify-center"
                   >
                     <Image
                       className={company.className}
@@ -42,26 +43,26 @@ export default function ProfessionalInformation() {
               ))}
             </div>
             <div
-              className={`flex flex-col justify-start items-center gap-4 transition-all duration-700 ${
+              className={`mid-breakpoint:hidden flex flex-col justify-start items-center gap-4 transition-all duration-700 ${
                 selectedCompany.name === PETZ
                   ? "w-[144px]"
                   : "w-[76px] ml-[222px]"
               }`}
             >
               <div
-                className={`bg-white transition-all duration-700 w-full h-1 opacity-40`}
+                className={`bg-white transition-all duration-700 w-full h-1 mt-2 opacity-40`}
               />
             </div>
-            <div className="h-2/3 flex items-center">
+            <div className="h-2/3 flex items-center px_1000:h-auto px_1000:mr-16">
               <div
                 className={`${
                   selectedCompany.name === PETZ
                     ? "border-[#175EA8]"
-                    : "border-[#f58634] ml-32"
+                    : "border-[#f58634] ml-32 mid-breakpoint:ml-0"
                 } border-4 transition-all duration-500 py-4 px-8 rounded-2xl`}
               >
-                <p className="text-4xl text-white">{selectedCompany.name}</p>
-                <p className="text-xl text-white opacity-70">
+                <p className="text-4xl text-white mid-breakpoint:text-2xl">{selectedCompany.name}</p>
+                <p className="text-xl text-white opacity-70 mid-breakpoint:text-lg">
                   {(language == LANGUAGES.PTBR
                     ? selectedCompany.workMode.PTBR
                     : selectedCompany.workMode.EN) +
@@ -71,7 +72,7 @@ export default function ProfessionalInformation() {
               </div>
             </div>
           </div>
-          <div className={`rounded-2xl w-2/3 h-[340px] px-10 py-6 mr-20`}>
+          <div className={`w-2/3 mid-breakpoint:w-full h-[340px] px-10 py-6`}>
             <div className="flex flex-col gap-4">
               <div className="flex justify-between">
                 <div className="flex flex-col gap-4">

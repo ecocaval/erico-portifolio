@@ -18,6 +18,13 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        'header-breakpoint': {'min': '1720px'},
+        'mid-breakpoint': {'max': '1330px'},
+        'px_1000': {'max': '1000px'},
+        'small-breakpoint': {'max': '950px'},
+        'px_770': {'min': '770px'},
+      },
       mono: {
         "jetbrains-mono": ["JetBrains Mono"],
       },

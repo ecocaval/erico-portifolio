@@ -10,14 +10,14 @@ export default function Home() {
   return (
     <main>
       <MyInformation />
-      <div className="flex bg-gradient-to-b from-[#130526] to-[#250850] h-[400px] px-40">
+      <div className="flex bg-gradient-to-b from-[#130526] to-[#250850] pb-8 mid-breakpoint:h-auto px-20 2xl:px-40 mid-breakpoint:px-0">
+        <ProfessionalInformation />
+      </div>
+      <div className="flex mid-breakpoint:flex-col mid-breakpoint:h-auto bg-gradient-to-t from-[#130526] to-[#250850] h-[400px] px-20 2xl:px-40 small-breakpoint:px-0 mb-8">
         <StackInformation />
         <AcademicInformation />
       </div>
-      <div className="flex bg-gradient-to-t from-[#130526] to-[#250850] h-[500px] px-40 pt-4">
-        <ProfessionalInformation />
-      </div>
-      <div className="flex bg-[#130526] h-[550px] px-40">
+      <div className="flex bg-gradient-to-b from-[#130526] to-[#250850] h-auto px-20 2xl:px-40 pb-8 mid-breakpoint:px-0">
         <RecomendationsInformation />
       </div>
     </main>

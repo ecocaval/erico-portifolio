@@ -16,7 +16,7 @@ export default function StackInformation() {
 
   return (
     <>
-      <div className="w-1/2" ref={stackInfoReference}>
+      <div className="w-1/2 mid-breakpoint:w-full mid-breakpoint:px-20" ref={stackInfoReference}>
         <h2 className="text-white text-4xl">
           {language == LANGUAGES.PTBR ? "Stack Utilizada:" : "Stack Used:"}
         </h2>

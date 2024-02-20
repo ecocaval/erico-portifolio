@@ -11,7 +11,7 @@ export default function AcademicInformation() {
   const { language } = useContext(LanguageContext);
 
   return (
-    <div className="w-auto ml-20" ref={academicInfoReference}>
+    <div className="w-auto ml-20 mid-breakpoint:mt-12" ref={academicInfoReference}>
       <h2 className="text-white text-4xl">
         {language == LANGUAGES.PTBR
           ? "Formação Acadêmica:"

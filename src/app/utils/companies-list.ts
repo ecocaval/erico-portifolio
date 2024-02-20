@@ -5,7 +5,7 @@ export const COMPANIES_LIST = [
   {
     name: PETZ,
     themeColor: "#175EA8",
-    className: "object-fill",
+    className: "object-contain",
     src: "/petz.png",
     alt: "petz logo",
     width: 144,
@@ -57,7 +57,7 @@ export const COMPANIES_LIST = [
   {
     name: DOUTORIE,
     themeColor: "#f58634",
-    className: "object-fill",
+    className: "object-contain",
     src: "/doutorie.png",
     alt: "doutorie logo",
     width: 76,
