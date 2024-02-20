@@ -4,23 +4,28 @@ import BigLayoutDot from "./big-layout-dot";
 import { EDUCATIONAL_LIST } from "@/app/utils/educational-list";
 import { useContext } from "react";
 import { ReferenceToScrollContext } from "@/contexts/referenceToScrollContext";
+import { LANGUAGES, LanguageContext } from "@/contexts/languageContext";
 
 export default function AcademicInformation() {
-
   const { academicInfoReference } = useContext(ReferenceToScrollContext);
-  
+  const { language } = useContext(LanguageContext);
+
   return (
     <div className="w-auto ml-20" ref={academicInfoReference}>
-      <h2 className="text-white text-4xl">Formação Acadêmica:</h2>
+      <h2 className="text-white text-4xl">
+        {language == LANGUAGES.PTBR
+          ? "Formação Acadêmica:"
+          : "Academic Education:"}
+      </h2>
       <div className="mt-8 flex flex-col gap-4">
-        {EDUCATIONAL_LIST.map((item, listIndex) => (
+        {(language == LANGUAGES.PTBR ? EDUCATIONAL_LIST.PTBR : EDUCATIONAL_LIST.EN).map((item, listIndex) => (
           <div
             key={Math.random()}
             className="group flex gap-4 items-start cursor-pointer"
           >
             <div className="mt-2 flex flex-col gap-2 items-center">
               <BigLayoutDot />
-              {listIndex !== EDUCATIONAL_LIST.length - 1 &&
+              {listIndex !== (language == LANGUAGES.PTBR ? EDUCATIONAL_LIST.PTBR : EDUCATIONAL_LIST.EN).length - 1 &&
                 new Array(5).fill(null).map((_, dotsIndex) => (
                   <div
                     key={Math.random()}

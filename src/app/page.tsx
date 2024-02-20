@@ -5,12 +5,10 @@ import StackInformation from "@/components/stack-information";
 import AcademicInformation from "@/components/academic-information";
 import ProfessionalInformation from "@/components/professional-information";
 import RecomendationsInformation from "@/components/recomendations-information";
-import Header from "@/components/header";
 
 export default function Home() {
   return (
     <main>
-      <Header />
       <MyInformation />
       <div className="flex bg-gradient-to-b from-[#130526] to-[#250850] h-[400px] px-40">
         <StackInformation />

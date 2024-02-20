@@ -10,10 +10,20 @@ const refs = {
   DOWNLOAD: "DOWNLOAD",
 };
 
-export const { HOME, ABOUT, PROFESSIONAL, CONTACT, ACADEMIC, RECOMENDATION, DOWNLOAD } =
-  refs;
+export const {
+  HOME,
+  ABOUT,
+  PROFESSIONAL,
+  CONTACT,
+  ACADEMIC,
+  RECOMENDATION,
+  DOWNLOAD,
+} = refs;
 
-export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = [
+export const headerButtonsList: (buttonWithIconPropsType & {
+  ref: string;
+  buttonTextEnglish: string;
+})[] = [
   {
     ref: HOME,
     iconSourcePath: "/home.svg",
@@ -22,6 +32,7 @@ export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = 
     iconWidth: 20,
     iconHeight: 17,
     buttonText: "Home",
+    buttonTextEnglish: "Home",
     iconAdditionalCss: "",
     textAdditionalCss: "",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
@@ -34,6 +45,7 @@ export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = 
     iconWidth: 20,
     iconHeight: 20,
     buttonText: "Stack",
+    buttonTextEnglish: "Stack",
     iconAdditionalCss: "",
     textAdditionalCss: "",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
@@ -46,6 +58,7 @@ export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = 
     iconWidth: 34,
     iconHeight: 34,
     buttonText: "XP Acadêmica",
+    buttonTextEnglish: "Academic XP",
     iconAdditionalCss: "",
     textAdditionalCss: "",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
@@ -58,6 +71,7 @@ export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = 
     iconWidth: 20,
     iconHeight: 19,
     buttonText: "XP Profissional",
+    buttonTextEnglish: "Work XP",
     iconAdditionalCss: "",
     textAdditionalCss: "",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
@@ -70,6 +84,7 @@ export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = 
     iconWidth: 24,
     iconHeight: 16,
     buttonText: "Recomendações",
+    buttonTextEnglish: "Recomendations",
     iconAdditionalCss: "",
     textAdditionalCss: "",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
@@ -82,6 +97,7 @@ export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = 
     iconWidth: 16,
     iconHeight: 16,
     buttonText: "Contato",
+    buttonTextEnglish: "Contact Me",
     iconAdditionalCss: "",
     textAdditionalCss: "",
     buttonAdditionalCss: "hover:bg-white duration-300 ease",
@@ -94,6 +110,7 @@ export const headerButtonsList: (buttonWithIconPropsType & { ref: string })[] = 
     iconWidth: 20,
     iconHeight: 20,
     buttonText: "Download Curriculum Vitae",
+    buttonTextEnglish: "Download Curriculum Vitae",
     buttonAdditionalCss:
       "hover:bg-white duration-300 ease bg-[#2B1E3C] border border-gray-500 ml-[120px]",
     iconAdditionalCss: "",

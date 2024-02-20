@@ -3,16 +3,22 @@ import { useContext, useState } from "react";
 import SmallLayoutDot from "./small-layout-dot";
 import { COMPANIES_LIST, PETZ } from "@/app/utils/companies-list";
 import { ReferenceToScrollContext } from "@/contexts/referenceToScrollContext";
+import { LANGUAGES, LanguageContext } from "@/contexts/languageContext";
 
 export default function ProfessionalInformation() {
   const [selectedCompany, setSelectedCompany] = useState(COMPANIES_LIST[0]);
 
   const { professionalInfoReference } = useContext(ReferenceToScrollContext);
+  const { language } = useContext(LanguageContext);
 
   return (
     <>
       <div className="w-full mt-8" ref={professionalInfoReference}>
-        <h2 className="text-white text-4xl">Experiência Profissional:</h2>
+        <h2 className="text-white text-4xl">
+          {language == LANGUAGES.PTBR
+            ? "Experiência Profissional:"
+            : "Work Experience:"}
+        </h2>
         <div className="mt-10 flex gap-8 justify-between">
           <div className="w-1/3 h-auto">
             <div className="flex h-auto gap-20 items-center">
@@ -56,7 +62,9 @@ export default function ProfessionalInformation() {
               >
                 <p className="text-4xl text-white">{selectedCompany.name}</p>
                 <p className="text-xl text-white opacity-70">
-                  {selectedCompany.workMode +
+                  {(language == LANGUAGES.PTBR
+                    ? selectedCompany.workMode.PTBR
+                    : selectedCompany.workMode.EN) +
                     " - " +
                     selectedCompany.workRegime}
                 </p>
@@ -67,7 +75,10 @@ export default function ProfessionalInformation() {
             <div className="flex flex-col gap-4">
               <div className="flex justify-between">
                 <div className="flex flex-col gap-4">
-                  {selectedCompany.jobOccupations.map((occupation) => (
+                  {(language == LANGUAGES.PTBR
+                    ? selectedCompany.jobOccupations.PTBR
+                    : selectedCompany.jobOccupations.EN
+                  ).map((occupation) => (
                     <div key={Math.random()} className="flex gap-6">
                       <SmallLayoutDot additionalCss="mt-4" />
                       <div>
@@ -96,7 +107,9 @@ export default function ProfessionalInformation() {
                 </div>
               </div>
               <p className="text-lg text-white mt-4 text-justify">
-                {selectedCompany.description}
+                {language == LANGUAGES.PTBR
+                  ? selectedCompany.description.PTBR
+                  : selectedCompany.description.EN}
               </p>
             </div>
           </div>

@@ -1,22 +1,29 @@
 import { CONTACT_ME_BUTTONS_LIST } from "@/app/utils/contact-me-buttons-list";
 import { ButtonWithIcon } from "./button-with-icon";
 import Image from "next/image";
+import { useContext } from "react";
+import { LANGUAGES, LanguageContext } from "@/contexts/languageContext";
 
 export default function MyInformation() {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div className="flex justify-center mb-4">
       <div className="flex p-2 pt-8 justify-around">
         <div className="pr-28 pt-4">
           <h1 className="text-white text-4xl leading-tight">
-            Olá, eu sou o <br />
+            {language == LANGUAGES.PTBR ? "Olá, eu sou o" : "Hi, I am"} <br />
             Érico Cavalcanti
           </h1>
           <h2 className="text-white text-2xl py-6 font-extrabold">
-            Desenvolvedor Full-stack Pleno
+            {language == LANGUAGES.PTBR
+              ? "Desenvolvedor Full-stack Pleno"
+              : "Mid-level Full-stack Developer"}
           </h2>
-          <p className="text-white text-lg">
-            Atualmente trabalhando no ecommerce Petz <br />
-            como desenvolvedor backend pleno.
+          <p className="text-white text-lg w-[500px]">
+            {language == LANGUAGES.PTBR
+              ? "Atualmente trabalhando no ecommerce Petz como desenvolvedor backend pleno."
+              : "Currently working at Petz ecommerce as a mid-level backend developer."}
           </p>
           <div className="w-full flex justify-between mt-10">
             {CONTACT_ME_BUTTONS_LIST.map((item) => (
@@ -45,7 +52,9 @@ export default function MyInformation() {
             height={350}
           />
           <div
-            className="w-[350px] h-[350px] rounded-full bg-gradient-to-b from-white to-transparent filter absolute left-4 drop-shadow-[10px_10px_20px_rgba(255,255,255,0.5)]"
+            className="w-[350px] h-[350px] rounded-full bg-gradient-to-b 
+          from-white to-transparent filter absolute left-4 
+          drop-shadow-[10px_10px_20px_rgba(255,255,255,0.5)]"
           />
         </div>
       </div>

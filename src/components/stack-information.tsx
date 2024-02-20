@@ -3,6 +3,7 @@ import { ButtonWithIcon } from "./button-with-icon";
 import StackButton from "./stack-button";
 import { useContext, useState } from "react";
 import { ReferenceToScrollContext } from "@/contexts/referenceToScrollContext";
+import { LANGUAGES, LanguageContext } from "@/contexts/languageContext";
 
 export default function StackInformation() {
   const [selectedStack, setSelectedStack] = useState(STACKS_LIST[0]);
@@ -11,11 +12,14 @@ export default function StackInformation() {
   );
 
   const { stackInfoReference } = useContext(ReferenceToScrollContext);
+  const { language } = useContext(LanguageContext);
 
   return (
     <>
       <div className="w-1/2" ref={stackInfoReference}>
-        <h2 className="text-white text-4xl">Stack Utilizadas:</h2>
+        <h2 className="text-white text-4xl">
+          {language == LANGUAGES.PTBR ? "Stack Utilizada:" : "Stack Used:"}
+        </h2>
         <div className="flex mt-8">
           <div className="">
             {STACKS_LIST.map((item) => (
@@ -68,7 +72,9 @@ export default function StackInformation() {
                 ></ButtonWithIcon>
               ))}
               <p className="px-4 text-white text-lg">
-                {selectedStack.description}
+                {language == LANGUAGES.PTBR
+                  ? selectedStack.descriptionPTBR
+                  : selectedStack.descriptionEN}
               </p>
             </div>
           </div>

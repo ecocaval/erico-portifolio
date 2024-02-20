@@ -7,7 +7,8 @@ const TYPESCRIPT = "Typescript";
 export const STACKS = { java: JAVA, typescript: TYPESCRIPT };
 
 export interface stackType extends Omit<stackButtonPropsType, "selectedStack"> {
-  description: string;
+  descriptionPTBR: string;
+  descriptionEN: string;
   technologies: buttonWithIconPropsType[]
 }
 
@@ -18,7 +19,8 @@ export const STACKS_LIST: stackType[] = [
     iconAltText: "java icon",
     iconWidth: 41,
     iconHeight: 56,
-    description: "Conhecimento em Microsserviços, JPA, JDBC, Spring Security, Feign...",
+    descriptionPTBR: "Conhecimento em Microsserviços, JPA, JDBC, Spring Security, Feign...",
+    descriptionEN: "Knowledge in Microservices, JPA, JDBC, Spring Security, Feign...",
     technologies: [
       {
         iconSourcePath: "/spring.svg",
@@ -50,7 +52,8 @@ export const STACKS_LIST: stackType[] = [
     iconAltText: "typescript icon",
     iconWidth: 42,
     iconHeight: 42,
-    description: "Conhecimento nos conceitos gerais de React e noções básicas de UI/UX...",
+    descriptionPTBR: "Conhecimento nos conceitos gerais de React e noções básicas de UI/UX...",
+    descriptionEN: "Knowledge in general concepts of React and basic notions of UI/UX...",
     technologies: [
       {
         iconSourcePath: "/next.svg",
